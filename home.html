@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | FatureMais</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-page">
+  <header class="dashboard-header">
+    <a class="brand" href="home.html">
+      <span class="brand-mark">F+</span>
+      <span class="brand-text">FatureMais</span>
+    </a>
+
+    <div class="dashboard-user">
+      <div>
+        <span class="dashboard-user-label">Usuário logado</span>
+        <strong id="userName">Carregando...</strong>
+      </div>
+      <button id="logoutButton" class="button button-secondary" type="button">Sair</button>
+    </div>
+  </header>
+
+  <main class="dashboard-main">
+    <section class="welcome-card">
+      <span class="eyebrow">Painel inicial</span>
+      <h1>Seu acesso está ativo.</h1>
+      <p id="userEmail">
+        Estamos carregando os dados da sua sessão para continuar a navegação.
+      </p>
+    </section>
+
+    <section class="dashboard-grid">
+      <article class="dashboard-card">
+        <span>Status</span>
+        <strong>Integração concluída</strong>
+        <p>Cadastro e login já estão conectados ao banco local com persistência de sessão.</p>
+      </article>
+      <article class="dashboard-card">
+        <span>Próximo passo</span>
+        <strong>Contas a pagar</strong>
+        <p>Esta home já está pronta para receber módulos de lançamentos, fornecedores e vencimentos.</p>
+      </article>
+      <article class="dashboard-card">
+        <span>Estrutura</span>
+        <strong>Frontend + API</strong>
+        <p>O projeto agora possui páginas organizadas e backend em Node servindo toda a aplicação.</p>
+      </article>
+    </section>
+  </main>
+
+  <script src="shared.js"></script>
+  <script src="home.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "faturemais",
+  "version": "1.0.0",
+  "description": "Sistema de contas a pagar com cadastro e login integrados ao MySQL.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "mysql2": "^3.15.2"
+  }
+}

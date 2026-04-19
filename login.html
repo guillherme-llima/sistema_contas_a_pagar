@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrar | FatureMais</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+  <main class="auth-layout">
+    <section class="auth-panel auth-panel-brand">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">F+</span>
+        <span class="brand-text">FatureMais</span>
+      </a>
+      <span class="eyebrow">Controle financeiro profissional</span>
+      <h1>Entre na sua conta e acompanhe o financeiro com segurança.</h1>
+      <p>
+        Faça login para acessar sua área inicial e evoluir o sistema de contas a pagar
+        com uma base pronta para crescimento.
+      </p>
+      <div class="auth-badge-list">
+        <span>Login integrado</span>
+        <span>Banco inicializado automaticamente</span>
+        <span>Sessão persistida</span>
+      </div>
+    </section>
+
+    <section class="auth-panel auth-panel-form">
+      <div class="auth-card">
+        <div class="section-heading">
+          <span class="eyebrow">Acesso</span>
+          <h2>Entrar no sistema</h2>
+        </div>
+
+        <form id="loginForm" class="auth-form">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="voce@empresa.com" required>
+
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" name="senha" placeholder="Digite sua senha" minlength="6" required>
+
+          <button type="submit" class="button">Entrar</button>
+        </form>
+
+        <p id="formMessage" class="form-message" aria-live="polite"></p>
+
+        <p class="auth-switch">
+          Ainda não tem conta?
+          <a href="cadastro.html">Criar conta</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="shared.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>

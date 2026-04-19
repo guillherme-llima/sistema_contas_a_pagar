@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar conta | FatureMais</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+  <main class="auth-layout">
+    <section class="auth-panel auth-panel-brand">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">F+</span>
+        <span class="brand-text">FatureMais</span>
+      </a>
+      <span class="eyebrow">Primeiro acesso</span>
+      <h1>Cadastre novos usuários no sistema com uma experiência mais profissional.</h1>
+      <p>
+        O formulário cria o usuário no banco de dados e já deixa o acesso preparado para login.
+      </p>
+      <div class="auth-badge-list">
+        <span>Nome e e-mail validados</span>
+        <span>Senha protegida</span>
+        <span>Fluxo conectado à home</span>
+      </div>
+    </section>
+
+    <section class="auth-panel auth-panel-form">
+      <div class="auth-card">
+        <div class="section-heading">
+          <span class="eyebrow">Cadastro</span>
+          <h2>Criar uma nova conta</h2>
+        </div>
+
+        <form id="registerForm" class="auth-form">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome completo" minlength="3" required>
+
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="voce@empresa.com" required>
+
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" name="senha" placeholder="Mínimo de 6 caracteres" minlength="6" required>
+
+          <button type="submit" class="button">Criar conta</button>
+        </form>
+
+        <p id="formMessage" class="form-message" aria-live="polite"></p>
+
+        <p class="auth-switch">
+          Já possui acesso?
+          <a href="login.html">Entrar agora</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="shared.js"></script>
+  <script src="cadastro.js"></script>
+</body>
+</html>
