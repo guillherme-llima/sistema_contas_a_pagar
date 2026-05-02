@@ -11,7 +11,7 @@ Sistema inicial de contas a pagar com:
 ## Como executar
 
 1. Abra o terminal na pasta do projeto.
-2. Execute o arquivo `database.sql` no MySQL Workbench.
+2. Execute o arquivo `database.sql` no MySQL Workbench para recriar o modelo exatamente como no DER.
 3. Ajuste o arquivo `.env` com o host, porta, usuario, senha e banco do servidor MySQL.
 4. Instale a dependencia:
 
@@ -35,7 +35,7 @@ npm start
 - `home.html`: area autenticada
 - `server.js`: servidor HTTP + API de autenticacao
 - `database.sql`: script para executar no MySQL Workbench
-- `primeiro-acesso.sql`: modelo para inserir o primeiro usuario diretamente no banco
+- `primeiro-acesso.sql`: modelo para inserir o primeiro usuario em `seguranca.tbUsuarios`
 - `.env.example`: configuracao de conexao com MySQL
 
 ## API
@@ -46,4 +46,4 @@ npm start
 
 ## Observacao
 
-O servidor cria automaticamente o banco configurado em `DB_NAME` e depois aplica as tabelas. Para provedores como Aiven, utilize `DB_SSL=true`.
+O servidor cria automaticamente os schemas `seguranca`, `cadastro` e `financeiro` e depois aplica as tabelas do modelo atual. Para recriar o banco do zero seguindo o DER, execute primeiro `database.sql`. Para provedores como Aiven, utilize `DB_SSL=true`.

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usuarios | FatureMais</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-page users-page">
+  <header class="app-header">
+    <a class="app-brand" href="home.html">Savir Sistemas</a>
+
+    <nav class="app-nav">
+      <a href="home.html">Inicio</a>
+      <div class="app-nav-dropdown">
+        <button class="app-nav-trigger" type="button">Cadastros</button>
+        <div class="app-nav-menu">
+          <a href="usuarios.html" class="is-active">Usuarios</a>
+        </div>
+      </div>
+      <a href="home.html#sobre">Sobre</a>
+      <a href="home.html#servicos">Servicos</a>
+      <a href="home.html#contato">Contato</a>
+      <button id="logoutButton" class="app-nav-link-button" type="button">Sair</button>
+    </nav>
+  </header>
+
+  <main class="users-main">
+    <section class="users-shell">
+      <div class="users-shell-header">
+        <div>
+          <p class="users-shell-eyebrow">Sprint - Usuarios - CRUD</p>
+          <h1>Usuarios - Listar</h1>
+        </div>
+        <div class="users-session">
+          <span>Logado como</span>
+          <strong id="userName">Carregando...</strong>
+        </div>
+      </div>
+
+      <div class="users-toolbar">
+        <button id="addButton" class="crud-button button-blue" type="button">Incluir</button>
+        <button id="editButton" class="crud-button button-blue" type="button" disabled>Editar</button>
+        <button id="deleteButton" class="crud-button button-red" type="button" disabled>Excluir</button>
+        <button id="printButton" class="crud-button button-blue" type="button">Imprimir</button>
+      </div>
+
+      <p id="listMessage" class="list-message"></p>
+
+      <div class="users-table-card">
+        <table class="users-table">
+          <thead>
+            <tr>
+              <th class="check-column"></th>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>E-mail</th>
+              <th>Perfil</th>
+            </tr>
+          </thead>
+          <tbody id="usersTableBody">
+            <tr>
+              <td colspan="5">Carregando usuarios...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <div id="userModal" class="modal-backdrop is-hidden">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <span class="eyebrow">Cadastro</span>
+          <h2 id="modalTitle">Novo usuario</h2>
+        </div>
+        <button id="closeModalButton" class="modal-close" type="button" aria-label="Fechar">x</button>
+      </div>
+
+      <form id="userForm" class="modal-form">
+        <input id="userId" type="hidden">
+
+        <label for="userNome">Nome</label>
+        <input id="userNome" name="nome" type="text" minlength="3" required>
+
+        <label for="userEmail">E-mail</label>
+        <input id="userEmail" name="email" type="email" required>
+
+        <label for="userSenha">Senha</label>
+        <input id="userSenha" name="senha" type="password" minlength="6" placeholder="Informe apenas para criar ou alterar">
+
+        <p id="formMessage" class="form-message"></p>
+
+        <div class="modal-actions">
+          <button id="cancelModalButton" class="button button-secondary" type="button">Cancelar</button>
+          <button id="saveUserButton" class="button" type="submit">Salvar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="shared.js"></script>
+  <script src="usuarios.js"></script>
+</body>
+</html>
