@@ -406,6 +406,10 @@ input {
   cursor: pointer;
 }
 
+.app-nav-caret {
+  font-size: 0.9em;
+}
+
 .app-nav-dropdown {
   position: relative;
 }
@@ -425,6 +429,16 @@ input {
   transform: translateY(8px);
   transition: opacity 0.18s ease, transform 0.18s ease;
   z-index: 10;
+}
+
+.app-nav-menu-label {
+  display: block;
+  padding: 6px 12px 10px;
+  color: #64748b;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .app-nav-dropdown:hover .app-nav-menu,
@@ -482,6 +496,13 @@ input {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+}
+
+.users-breadcrumb {
+  margin: 0 0 10px;
+  color: #64748b;
+  font-size: 0.95rem;
+  font-weight: 600;
 }
 
 .users-shell-header h1 {
